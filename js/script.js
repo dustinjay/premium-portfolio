@@ -229,3 +229,207 @@ document.addEventListener("keydown", function(e) {
     }
 
 });
+
+document.querySelectorAll('.graphic-project').forEach(function (project) {
+
+    project.addEventListener('click', function (e) {
+
+        e.preventDefault();
+
+        const image =
+            this.querySelector('img');
+
+        if (!image) return;
+
+
+        const lightbox =
+            document.createElement('div');
+
+        lightbox.style.position = 'fixed';
+        lightbox.style.inset = '0';
+        lightbox.style.width = '100vw';
+        lightbox.style.height = '100vh';
+        lightbox.style.background = 'rgba(0,0,0,.97)';
+        lightbox.style.display = 'flex';
+        lightbox.style.alignItems = 'center';
+        lightbox.style.justifyContent = 'center';
+        lightbox.style.zIndex = '99999';
+        lightbox.style.cursor = 'pointer';
+
+
+        const largeImage =
+            document.createElement('img');
+
+        largeImage.src = image.src;
+
+        largeImage.alt = image.alt;
+
+        largeImage.style.width = '100vw';
+        largeImage.style.height = '100vh';
+        largeImage.style.objectFit = 'contain';
+
+
+        lightbox.appendChild(
+            largeImage
+        );
+
+        document.body.appendChild(
+            lightbox
+        );
+
+        document.body.style.overflow =
+            'hidden';
+
+
+        lightbox.addEventListener(
+            'click',
+            function () {
+
+                lightbox.remove();
+
+                document.body.style.overflow =
+                    '';
+
+            }
+        );
+
+    });
+
+});
+
+// =========================================
+// GRAPHIC + LEAD GENERATION LIGHTBOX
+// =========================================
+
+const imageProjects = document.querySelectorAll(
+    '.graphic-project, .leadgen-sample'
+);
+
+imageProjects.forEach(function (project) {
+
+    project.addEventListener('click', function (e) {
+
+        e.preventDefault();
+        e.stopPropagation();
+
+
+        const image = this.querySelector('img');
+
+        if (!image) return;
+
+
+        const lightbox =
+            document.createElement('div');
+
+        lightbox.className =
+            'image-lightbox';
+
+
+        lightbox.innerHTML = `
+
+            <button
+                type="button"
+                class="image-lightbox-close"
+                aria-label="Close image"
+            >
+                ×
+            </button>
+
+            <img
+                src="${image.src}"
+                alt="${image.alt}"
+            >
+
+        `;
+
+
+        document.body.appendChild(lightbox);
+
+
+        requestAnimationFrame(function () {
+
+            lightbox.classList.add('active');
+
+        });
+
+
+        document.body.style.overflow =
+            'hidden';
+
+
+        // CLOSE BUTTON
+
+        const closeButton =
+            lightbox.querySelector(
+                '.image-lightbox-close'
+            );
+
+
+        function closeImageLightbox() {
+
+            lightbox.classList.remove(
+                'active'
+            );
+
+            document.body.style.overflow =
+                '';
+
+            setTimeout(function () {
+
+                lightbox.remove();
+
+            }, 300);
+
+        }
+
+
+        closeButton.addEventListener(
+            'click',
+            closeImageLightbox
+        );
+
+
+        // CLICK OUTSIDE IMAGE
+
+        lightbox.addEventListener(
+            'click',
+            function (event) {
+
+                if (
+                    event.target === lightbox
+                ) {
+
+                    closeImageLightbox();
+
+                }
+
+            }
+        );
+
+
+        // ESC KEY
+
+        function escapeHandler(event) {
+
+            if (event.key === 'Escape') {
+
+                closeImageLightbox();
+
+                document.removeEventListener(
+                    'keydown',
+                    escapeHandler
+                );
+
+            }
+
+        }
+
+
+        document.addEventListener(
+            'keydown',
+            escapeHandler
+        );
+
+    });
+
+});
