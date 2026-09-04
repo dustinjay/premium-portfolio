@@ -1692,144 +1692,6 @@ footer {
 
 }
 
-/* =========================================
-   HORIZONTAL CONTACT LINKS
-========================================= */
-
-.contact-links {
-    width: 100%;
-    margin-top: 80px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-}
-
-.contact-link {
-    min-width: 0;
-
-    display: flex;
-    align-items: center;
-    gap: 15px;
-
-    padding: 22px 20px;
-
-    border-right: 1px solid #222;
-
-    transition: background .3s ease;
-}
-
-.contact-link:last-child {
-    border-right: none;
-}
-
-.contact-link:hover {
-    background: #0d0d0d;
-}
-
-.contact-icon {
-    width: 38px;
-    height: 38px;
-
-    flex: 0 0 38px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #333;
-
-    color: #aaa;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    transition:
-        background .3s ease,
-        color .3s ease,
-        border-color .3s ease;
-}
-
-.contact-link:hover .contact-icon {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
-}
-
-.linkedin-icon {
-    font-size: 12px;
-}
-
-.facebook-icon {
-    font-size: 19px;
-}
-
-.instagram-icon {
-    font-size: 22px;
-}
-
-.contact-link-text {
-    min-width: 0;
-
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.contact-link-text small {
-    color: #555;
-
-    font-size: 8px;
-    letter-spacing: 2px;
-}
-
-.contact-link-text strong {
-    color: #eee;
-
-    font-size: 11px;
-    font-weight: 500;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.contact-arrow {
-    margin-left: auto;
-
-    color: #666;
-
-    font-size: 18px;
-
-    transition:
-        color .3s ease,
-        transform .3s ease;
-}
-
-.contact-link:hover .contact-arrow {
-    color: #fff;
-    transform: translate(3px, -3px);
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-    .contact-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-link:nth-child(2) {
-        border-right: none;
-    }
-
-}
-
 
 /* =========================================
    MOBILE
@@ -2412,126 +2274,7 @@ footer {
     filter: none;
 }
 
-/* =========================================
-   CONTACT — ICON STYLE
-========================================= */
 
-.contact-links {
-    width: 100%;
-    margin-top: 70px;
-
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-}
-
-.contact-link {
-    min-width: 170px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-
-    padding: 22px 25px;
-
-    border-right: 1px solid #222;
-
-    color: #aaa;
-
-    transition:
-        background .3s ease,
-        color .3s ease;
-}
-
-.contact-link:first-child {
-    border-left: 1px solid #222;
-}
-
-.contact-link:hover {
-    background: #0c0c0c;
-    color: #fff;
-}
-
-.contact-icon {
-    width: 40px;
-    height: 40px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid #333;
-
-    color: #aaa;
-
-    font-size: 15px;
-    font-weight: 600;
-
-    transition:
-        background .3s ease,
-        color .3s ease,
-        border-color .3s ease,
-        transform .3s ease;
-}
-
-.contact-link:hover .contact-icon {
-    background: #fff;
-    color: #000;
-    border-color: #fff;
-
-    transform: translateY(-2px);
-}
-
-.linkedin-icon {
-    font-size: 12px;
-}
-
-.facebook-icon {
-    font-size: 20px;
-}
-
-.instagram-icon {
-    font-size: 22px;
-}
-
-.contact-platform {
-    font-size: 9px;
-    letter-spacing: 1.5px;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-
-    .contact-links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .contact-link {
-        min-width: 0;
-        padding: 20px 10px;
-    }
-
-    .contact-link:nth-child(2) {
-        border-right: none;
-    }
-
-    .contact-link:nth-child(3) {
-        border-top: 1px solid #222;
-    }
-
-    .contact-link:nth-child(4) {
-        border-top: 1px solid #222;
-        border-right: none;
-    }
-
-}
 
 /* =========================================
    VIDEO CLIENT STAR RATING
@@ -2692,4 +2435,1478 @@ footer {
         font-size: 13px;
     }
 
+}
+
+/* =========================================
+   SOCIAL MEDIA MANAGEMENT SAMPLES
+   SAME STYLE AS EXISTING WORK
+========================================= */
+
+.management-work {
+    margin: 0;
+}
+
+.management-work .project-info {
+    margin-top: 18px;
+}
+
+.management-project {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background: #111;
+
+    border: 1px solid #222;
+}
+
+.management-project img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition:
+        transform .8s cubic-bezier(.2,.7,.2,1),
+        filter .6s ease;
+}
+
+.management-project:hover img {
+    transform: scale(1.07);
+
+    filter: grayscale(0);
+}
+
+.management-project .project-hover {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,.65);
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    opacity: 0;
+
+    transition: opacity .4s ease;
+}
+
+.management-project:hover .project-hover {
+    opacity: 1;
+}
+
+/* =========================================
+   TOOLS I USE — FULLY CENTERED
+========================================= */
+
+.tools-section {
+    overflow: hidden;
+}
+
+.tool-category {
+    margin-top: 85px;
+
+    text-align: center;
+}
+
+
+/* CATEGORY TITLE */
+
+.tool-category-heading {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #222;
+}
+
+.tool-category-heading h3 {
+    font-size: clamp(20px, 2.5vw, 32px);
+
+    font-weight: 500;
+
+    letter-spacing: -.04em;
+
+    text-align: center;
+}
+
+.tool-category-heading span {
+    color: #555;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+
+/* TOOL GRID */
+
+.tool-grid {
+    width: 100%;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px 35px;
+}
+
+
+/* TOOL ITEM */
+
+.tool-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 4px 0;
+
+    min-width: 150px;
+
+    background: transparent;
+
+    border: none;
+
+    transition:
+        transform .3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-3px);
+}
+
+
+/* SMALL ROUND LOGO */
+
+.tool-image {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    border: none;
+}
+
+.tool-image img {
+    width: 70%;
+    height: 70%;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter .4s ease,
+        transform .4s ease;
+}
+
+.tool-item:hover .tool-image img {
+    filter: grayscale(0);
+
+    transform: scale(1.08);
+}
+
+
+/* TOOL NAME */
+
+.tool-name {
+    color: #888;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    letter-spacing: .2px;
+
+    text-align: left;
+
+    transition:
+        color .3s ease;
+}
+
+.tool-item:hover .tool-name {
+    color: #fff;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .tool-category {
+        margin-top: 70px;
+    }
+
+    .tool-grid {
+        gap: 18px 25px;
+    }
+
+    .tool-item {
+        min-width: 140px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .tool-category {
+        margin-top: 60px;
+    }
+
+    .tool-category-heading {
+        margin-bottom: 25px;
+    }
+
+    .tool-category-heading h3 {
+        font-size: 18px;
+
+        max-width: 90%;
+    }
+
+    .tool-grid {
+        gap: 16px 15px;
+    }
+
+    .tool-item {
+        min-width: 130px;
+
+        gap: 8px;
+    }
+
+    .tool-image {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .tool-name {
+        font-size: 9px;
+    }
+
+}
+
+/* =========================================
+   CONTACT — CENTERED SOCIAL LINKS
+========================================= */
+
+.contact-links {
+    width: 100%;
+
+    margin-top: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+
+    border: none;
+}
+
+
+/* EACH LINK */
+
+.contact-link {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.contact-link:hover {
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+
+/* SMALL CIRCULAR ICON */
+
+.contact-icon {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #888;
+
+    font-size: 16px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/* IMAGE LOGOS */
+
+.contact-icon img {
+    width: 70%;
+    height: 70%;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter .4s ease,
+        transform .4s ease;
+}
+
+.contact-link:hover .contact-icon img {
+    filter: grayscale(0%);
+
+    transform: scale(1.1);
+}
+
+
+/* EMAIL ICON */
+
+.contact-link:first-child .contact-icon {
+    font-size: 17px;
+}
+
+
+/* LABEL */
+
+.contact-platform {
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+
+    color: #777;
+
+    transition: color .3s ease;
+}
+
+.contact-link:hover .contact-platform {
+    color: #fff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .contact-links {
+        gap: 22px;
+
+        flex-wrap: wrap;
+    }
+
+    .contact-link {
+        gap: 7px;
+    }
+
+    .contact-icon {
+        width: 34px;
+        height: 34px;
+
+        flex-basis: 34px;
+    }
+
+    .contact-platform {
+        font-size: 8px;
+        letter-spacing: 1.2px;
+    }
+
+}
+
+/* =========================================
+   SCROLL REVEAL ANIMATION
+========================================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Optional: stagger project items */
+
+.project.reveal:nth-child(2),
+.tool-item.reveal:nth-child(2),
+.client-card.reveal:nth-child(2) {
+    transition-delay: .08s;
+}
+
+.project.reveal:nth-child(3),
+.tool-item.reveal:nth-child(3),
+.client-card.reveal:nth-child(3) {
+    transition-delay: .16s;
+}
+
+.project.reveal:nth-child(4),
+.tool-item.reveal:nth-child(4),
+.client-card.reveal:nth-child(4) {
+    transition-delay: .24s;
+}
+
+.project.reveal:nth-child(5),
+.tool-item.reveal:nth-child(5),
+.client-card.reveal:nth-child(5) {
+    transition-delay: .32s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+}
+
+/* =========================================
+   FINAL PORTFOLIO VISUAL OVERRIDES
+   KEEPING ALL ORIGINAL STYLES INTACT
+========================================= */
+
+
+/* =========================================
+   1. PROJECT IMAGES — SLIGHTLY SMALLER
+      + SOFT ROUNDED CORNERS
+========================================= */
+
+.project-image {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 12px;
+}
+
+.project-image img {
+    border-radius: 12px;
+}
+
+
+/* Keep project info aligned neatly */
+
+.project-info {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+/* =========================================
+   2. CENTER 5TH SOCIAL MEDIA WORK
+========================================= */
+
+#social .projects > .project:nth-child(5) {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+}
+
+#social .projects > .project:nth-child(5) .project-image {
+    width: 96%;
+}
+
+
+/* =========================================
+   3. CENTER 5TH VIDEO EDIT
+========================================= */
+
+#editing .projects > .project:nth-child(5) {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+}
+
+#editing .projects > .project:nth-child(5) .project-image {
+    width: 96%;
+}
+
+
+/* =========================================
+   4. MANAGEMENT SAMPLES
+      Same visual treatment
+========================================= */
+
+.management-project {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 12px;
+}
+
+.management-project img {
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   5. GRAPHIC DESIGN
+      Same image treatment
+========================================= */
+
+.graphic-project {
+    border-radius: 12px;
+}
+
+.graphic-project img {
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   6. LEAD GENERATION SAMPLES
+========================================= */
+
+.leadgen-sample {
+    border-radius: 10px;
+}
+
+.leadgen-sample img {
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   7. TOOLS — CENTERED
+========================================= */
+
+.tools-section {
+    text-align: center;
+}
+
+.tool-category {
+    text-align: center;
+}
+
+.tool-category-heading {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 8px;
+}
+
+.tool-category-heading h3,
+.tool-category-heading span {
+    text-align: center;
+}
+
+.tool-grid {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px 35px;
+
+    width: 100%;
+}
+
+.tool-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    min-width: 150px;
+
+    padding: 4px 0;
+
+    background: transparent;
+    border: none;
+
+    text-align: center;
+}
+
+.tool-image {
+    width: 42px;
+    height: 42px;
+
+    flex: 0 0 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    border: none;
+}
+
+.tool-image img {
+    width: 70%;
+    height: 70%;
+
+    object-fit: contain;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter .4s ease,
+        transform .4s ease;
+}
+
+.tool-item:hover .tool-image img {
+    filter: grayscale(0);
+
+    transform: scale(1.08);
+}
+
+.tool-name {
+    color: #888;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    letter-spacing: .2px;
+
+    text-align: center;
+
+    transition: color .3s ease;
+}
+
+.tool-item:hover .tool-name {
+    color: #fff;
+}
+
+
+/* =========================================
+   8. CONTACT — CENTERED / NO BOXES
+========================================= */
+
+.contact {
+    text-align: center;
+
+    align-items: center;
+}
+
+.contact > span,
+.contact h2 {
+    text-align: center;
+}
+
+.contact-links {
+    width: 100%;
+
+    margin-top: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+
+    border: none;
+}
+
+.contact-link {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.contact-link:hover {
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+.contact-icon {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #888;
+
+    font-size: 16px;
+}
+
+.contact-icon img {
+    width: 70%;
+    height: 70%;
+
+    display: block;
+
+    object-fit: contain;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter .4s ease,
+        transform .4s ease;
+}
+
+.contact-link:hover .contact-icon img {
+    filter: grayscale(0%);
+
+    transform: scale(1.1);
+}
+
+.contact-platform {
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+
+    color: #777;
+
+    transition: color .3s ease;
+}
+
+.contact-link:hover .contact-platform {
+    color: #fff;
+}
+
+
+/* =========================================
+   9. CENTER OTHER MAIN TEXT
+      Does NOT affect HERO
+========================================= */
+
+.work-intro {
+    align-items: center;
+
+    text-align: center;
+}
+
+.work-intro h2,
+.work-intro p {
+    text-align: center;
+}
+
+.about-copy {
+    text-align: center;
+}
+
+.leadgen-section {
+    text-align: center;
+}
+
+.leadgen-samples-heading {
+    align-items: center;
+
+    text-align: center;
+}
+
+.leadgen-samples-heading p {
+    text-align: center;
+}
+
+.leadgen-current-copy {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.leadgen-current-copy p {
+    text-align: center;
+}
+
+
+/* =========================================
+   10. PROJECT TEXT
+========================================= */
+
+.project-info h3 {
+    color: #f5f5f5;
+}
+
+.project-info span {
+    color: #555;
+}
+
+
+/* =========================================
+   11. CLIENT TEXT CENTERING
+========================================= */
+
+.client-card,
+.video-client-card {
+    text-align: center;
+}
+
+.client-card-content,
+.video-client-content {
+    text-align: center;
+}
+
+.client-description {
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+
+.video-client-rating {
+    color: #FFD700;
+}
+
+
+/* =========================================
+   12. MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* 5th Social + Video reset */
+
+    #social .projects > .project:nth-child(5),
+    #editing .projects > .project:nth-child(5) {
+
+        grid-column: auto;
+
+        width: 100%;
+
+        justify-self: stretch;
+    }
+
+
+    /* Keep image size consistent */
+
+    .project-image,
+    .management-project {
+        width: 96%;
+    }
+
+
+    /* Project text */
+
+    .project-info {
+        width: 96%;
+
+        align-items: baseline;
+    }
+
+
+    /* Tools */
+
+    .tool-grid {
+        gap: 16px 15px;
+    }
+
+    .tool-item {
+        min-width: 130px;
+    }
+
+
+    /* Contact */
+
+    .contact-links {
+        gap: 22px;
+
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================
+   13. SMALL PHONE
+========================================= */
+
+@media (max-width: 400px) {
+
+    #social .projects > .project:nth-child(5),
+    #editing .projects > .project:nth-child(5) {
+
+        width: 100%;
+    }
+
+}
+
+/* =========================================
+   PREMIUM TOOLS CARD
+========================================= */
+
+.premium-tools-card {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 55px 45px;
+
+    background: #0b0b0b;
+
+    border: 1px solid #222;
+
+    border-radius: 24px;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TOOL GROUP
+========================================= */
+
+.premium-tool-group {
+    padding: 0 0 42px;
+
+    margin-bottom: 42px;
+
+    border-bottom: 1px solid #1d1d1d;
+}
+
+.premium-tool-group:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    border-bottom: none;
+}
+
+
+/* CATEGORY TITLE */
+
+.premium-tool-group h3 {
+    margin-bottom: 25px;
+
+    color: #f5f5f5;
+
+    font-size: 17px;
+
+    font-weight: 500;
+
+    letter-spacing: -.03em;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CENTERED TOOL LIST
+========================================= */
+
+.premium-tool-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 14px 28px;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   TOOL ITEM
+========================================= */
+
+.premium-tool {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    color: #888;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+.premium-tool:hover {
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SMALL ROUND LOGO
+========================================= */
+
+.premium-tool img {
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    display: block;
+
+    filter: grayscale(100%);
+
+    transition:
+        filter .4s ease,
+        transform .4s ease;
+}
+
+.premium-tool:hover img {
+    filter: grayscale(0);
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .premium-tools-card {
+        padding: 35px 18px;
+
+        border-radius: 18px;
+    }
+
+    .premium-tool-group {
+        padding-bottom: 32px;
+
+        margin-bottom: 32px;
+    }
+
+    .premium-tool-group h3 {
+        font-size: 15px;
+
+        line-height: 1.4;
+
+        max-width: 90%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .premium-tool-list {
+        gap: 14px 18px;
+    }
+
+    .premium-tool {
+        font-size: 8px;
+
+        gap: 7px;
+    }
+
+    .premium-tool img {
+        width: 30px;
+        height: 30px;
+
+        flex-basis: 30px;
+    }
+
+}
+
+/* =========================================
+   CENTER 5TH GRAPHIC DESIGN SAMPLE
+========================================= */
+
+#graphic-design .projects > .project:nth-child(5) {
+    grid-column: 1 / -1;
+    width: 50%;
+    justify-self: center;
+}
+
+#graphic-design .projects > .project:nth-child(5) .project-image {
+    width: 96%;
+}
+
+
+/* =========================================
+   TOOLS — MAKE THEM MORE VISIBLE
+========================================= */
+
+.premium-tools-card {
+    padding: 65px 55px;
+}
+
+
+/* CATEGORY TITLES */
+
+.premium-tool-group h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* TOOL LIST */
+
+.premium-tool-list {
+    gap: 22px 38px;
+}
+
+
+/* TOOL ITEM */
+
+.premium-tool {
+    gap: 12px;
+    font-size: 11px;
+}
+
+
+/* TOOL LOGO */
+
+.premium-tool img {
+    width: 46px;
+    height: 46px;
+    flex: 0 0 46px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    #graphic-design .projects > .project:nth-child(5) {
+        grid-column: auto;
+        width: 100%;
+        justify-self: stretch;
+    }
+
+
+    .premium-tools-card {
+        padding: 42px 22px;
+    }
+
+    .premium-tool-group h3 {
+        font-size: 17px;
+        margin-bottom: 24px;
+    }
+
+    .premium-tool-list {
+        gap: 17px 20px;
+    }
+
+    .premium-tool {
+        font-size: 9px;
+        gap: 8px;
+    }
+
+    .premium-tool img {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+    }
+
+}
+
+/* =========================================
+   SMOOTH SECTION BACKGROUND TRANSITIONS
+========================================= */
+
+body {
+    background:
+        linear-gradient(
+            180deg,
+            #050505 0%,
+            #080808 18%,
+            #050505 36%,
+            #090909 54%,
+            #050505 72%,
+            #080808 88%,
+            #050505 100%
+        );
+
+    background-attachment: fixed;
+}
+
+
+/* Slight variation per section */
+
+.about {
+    background: rgba(224, 217, 217, 0.008);
+}
+
+#social {
+    background: rgba(255, 255, 255, 0.012);
+}
+
+#social-management {
+    background: rgba(255, 255, 255, 0.006);
+}
+
+#graphic-design {
+    background: rgba(255, 255, 255, 0.012);
+}
+
+#editing {
+    background: rgba(255, 255, 255, 0.006);
+}
+
+#lead-generation {
+    background: rgba(255, 255, 255, 0.012);
+}
+
+#clients {
+    background: rgba(255, 255, 255, 0.006);
+}
+
+#video-clients {
+    background: rgba(255, 255, 255, 0.012);
+}
+
+#tools {
+    background: rgba(255, 255, 255, 0.006);
+}
+
+#contact {
+    background: rgba(255, 255, 255, 0.012);
+}
+
+
+/* =========================================
+   SCROLL PROGRESS
+========================================= */
+
+.scroll-progress {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #f5f5f5;
+
+    z-index: 99999;
+
+    transform-origin: left;
+
+    transition: width .08s linear;
+}
+
+
+/* Keep it subtle on mobile */
+
+@media (max-width: 700px) {
+
+    .scroll-progress {
+        height: 1px;
+    }
+
+}
+
+/* =========================================
+   CERTIFICATIONS
+   SAME SIZE AS OTHER PROJECTS
+========================================= */
+
+.certification-project {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+}
+
+.certification-project img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: grayscale(100%);
+
+    transition:
+        transform .8s cubic-bezier(.2,.7,.2,1),
+        filter .6s ease;
+}
+
+.certification-project:hover img {
+    filter: grayscale(0);
+
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .certification-project {
+        width: 96%;
+    }
+
+}
+
+/* =========================================
+   TOOLS + CONTACTS — ORIGINAL COLORS
+========================================= */
+
+.tool-image img,
+.premium-tool img,
+.contact-icon img {
+    filter: none !important;
+}
+
+
+/* Keep hover in original color too */
+
+.tool-item:hover .tool-image img,
+.premium-tool:hover img,
+.contact-link:hover .contact-icon img {
+    filter: none !important;
 }

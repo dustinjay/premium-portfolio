@@ -433,3 +433,72 @@ imageProjects.forEach(function (project) {
     });
 
 });
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(
+    '.section, .project, .client-card, .video-client-card, .leadgen-work-card, .tool-category, .service, .contact'
+);
+
+
+revealElements.forEach(function (element) {
+    element.classList.add('reveal');
+});
+
+
+const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add('show');
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12,
+        rootMargin: '0px 0px -60px 0px'
+    }
+);
+
+
+revealElements.forEach(function (element) {
+
+    revealObserver.observe(element);
+
+});
+
+/* =========================================
+   SCROLL PROGRESS
+========================================= */
+
+const scrollProgress =
+    document.querySelector('.scroll-progress');
+
+window.addEventListener('scroll', () => {
+
+    if (!scrollProgress) return;
+
+    const scrollTop = window.scrollY;
+
+    const documentHeight =
+        document.documentElement.scrollHeight -
+        window.innerHeight;
+
+    const progress =
+        documentHeight > 0
+            ? (scrollTop / documentHeight) * 100
+            : 0;
+
+    scrollProgress.style.width = `${progress}%`;
+
+});
